@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Award, Heart, Clock, Shield } from "lucide-react";
-import venueImg from "@/assets/venue-2.png";
+import venueImg from "@/assets/venue-about.png";
 
 const usps = [
   { icon: Award, title: "10+ Years Experience", desc: "A decade of creating unforgettable celebrations" },
