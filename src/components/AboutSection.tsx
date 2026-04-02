@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Award, Heart, Clock, Shield } from "lucide-react";
-import venueImg from "@/assets/venue-2.png";
+import venueImg from "@/assets/venue-about.png";
 
 const usps = [
-  { icon: Award, title: "10+ Years Experience", desc: "A decade of creating unforgettable celebrations" },
+  { icon: Award, title: "Since 2009", desc: "Over 15 years of creating unforgettable celebrations" },
   { icon: Heart, title: "Personalized Service", desc: "Every event tailored to your unique vision" },
   { icon: Clock, title: "Hassle-Free Planning", desc: "Our team handles every detail seamlessly" },
   { icon: Shield, title: "Trusted by 500+ Families", desc: "Building lasting relationships through quality" },
@@ -49,9 +49,10 @@ const AboutSection = () => {
               Your Dream Venue Awaits
             </h2>
             <p className="text-muted-foreground font-body leading-relaxed mb-4">
-              Shri Ram Vatika has been the premier wedding destination for over a decade. 
-              Nestled in a prime location with sprawling grounds, we offer the perfect blend 
-              of traditional charm and modern amenities.
+              Shri Ram Vatika has been the premier wedding destination since 2009. 
+              With over 15 years of experience in the industry, we have established ourselves 
+              as a trusted name for grand celebrations. Nestled in a prime location with sprawling 
+              grounds, we offer the perfect blend of traditional charm and modern amenities.
             </p>
             <p className="text-muted-foreground font-body leading-relaxed mb-8">
               From grand weddings to intimate engagements, our versatile spaces and dedicated 
