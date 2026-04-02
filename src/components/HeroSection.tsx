@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Users, MapPin, Sparkles, Car } from "lucide-react";
-import heroImg from "@/assets/venue-1.png";
+import heroImg from "@/assets/venue-hero.jpeg";
 
 const highlights = [
   { icon: Users, label: "1000+ Guests" },
