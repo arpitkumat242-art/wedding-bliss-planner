@@ -5,7 +5,7 @@ import { Award, Heart, Clock, Shield } from "lucide-react";
 import venueImg from "@/assets/venue-about.png";
 
 const usps = [
-  { icon: Award, title: "10+ Years Experience", desc: "A decade of creating unforgettable celebrations" },
+  { icon: Award, title: "Since 2009", desc: "Over 15 years of creating unforgettable celebrations" },
   { icon: Heart, title: "Personalized Service", desc: "Every event tailored to your unique vision" },
   { icon: Clock, title: "Hassle-Free Planning", desc: "Our team handles every detail seamlessly" },
   { icon: Shield, title: "Trusted by 500+ Families", desc: "Building lasting relationships through quality" },
