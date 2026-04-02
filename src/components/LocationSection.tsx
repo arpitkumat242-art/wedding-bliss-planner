@@ -50,9 +50,9 @@ const LocationSection = () => {
               <div>
                 <h3 className="font-display text-lg text-foreground mb-1">Nearby Landmarks</h3>
                 <ul className="text-muted-foreground text-sm font-body space-y-1">
-                  <li>• 2 km from Railway Station</li>
-                  <li>• 5 km from Bus Stand</li>
-                  <li>• Near City Mall</li>
+                  <li>• Maruti Nagar Colony, Dafi</li>
+                  <li>• Near Sear Govardhan Dafi</li>
+                  <li>• Varanasi, Uttar Pradesh</li>
                 </ul>
               </div>
             </div>
