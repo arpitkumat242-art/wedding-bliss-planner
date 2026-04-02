@@ -49,9 +49,10 @@ const AboutSection = () => {
               Your Dream Venue Awaits
             </h2>
             <p className="text-muted-foreground font-body leading-relaxed mb-4">
-              Shri Ram Vatika has been the premier wedding destination for over a decade. 
-              Nestled in a prime location with sprawling grounds, we offer the perfect blend 
-              of traditional charm and modern amenities.
+              Shri Ram Vatika has been the premier wedding destination since 2009. 
+              With over 15 years of experience in the industry, we have established ourselves 
+              as a trusted name for grand celebrations. Nestled in a prime location with sprawling 
+              grounds, we offer the perfect blend of traditional charm and modern amenities.
             </p>
             <p className="text-muted-foreground font-body leading-relaxed mb-8">
               From grand weddings to intimate engagements, our versatile spaces and dedicated 
