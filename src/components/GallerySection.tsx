@@ -13,6 +13,7 @@ import venue2 from "@/assets/venue-2.png";
 const categories = ["All", "Wedding Setup", "Stage", "Lighting", "Dining"];
 
 const images = [
+  { src: venue1, category: "Stage", alt: "Shri Ram Vatika venue front view" },
   { src: venueStage, category: "Stage", alt: "Wedding stage decoration" },
   { src: venueDining, category: "Dining", alt: "Dining arrangements" },
   { src: venueGarden, category: "Wedding Setup", alt: "Garden wedding setup" },
