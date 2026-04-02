@@ -39,8 +39,9 @@ const LocationSection = () => {
               <div>
                 <h3 className="font-display text-lg text-foreground mb-1">Address</h3>
                 <p className="text-muted-foreground text-sm font-body leading-relaxed">
-                  Shri Ram Vatika, Near Main Highway,<br />
-                  City Center, Uttar Pradesh, India
+                  Shri Ram Vatika, Maruti Nagar Colony,<br />
+                  Dafi, Sear Govardhan Dafi,<br />
+                  Uttar Pradesh 221011
                 </p>
               </div>
             </div>
