@@ -14,7 +14,7 @@ const ContactSection = () => {
             <Phone className="text-gold" size={28} />
             <p className="text-primary-foreground font-display font-semibold">Call Us</p>
             <a href="tel:+919935294198" className="text-primary-foreground/70 text-sm font-body hover:text-gold transition-colors">+91 99352 94198</a>
-            <a href="tel:+919339480827" className="text-primary-foreground/70 text-sm font-body hover:text-gold transition-colors">+91 93394 80827</a>
+            <a <a href="tel:+919336480827" className="text-primary-foreground/70 text-sm font-body hover:text-gold transition-colors">+91 93364 80827</a></a>
           </div>
 
           <a
