@@ -1,13 +1,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, MessageCircle } from "lucide-react";
+import { Send, MessageCircle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const eventTypes = ["Wedding", "Engagement", "Birthday Party", "Corporate Event", "Other"];
 
 const EnquirySection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -22,7 +24,7 @@ const EnquirySection = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.phone.trim()) {
       toast.error("Please fill in your name and phone number.");
@@ -32,8 +34,29 @@ const EnquirySection = () => {
       toast.error("Please enter a valid phone number.");
       return;
     }
-    toast.success("Thank you! Your enquiry has been submitted. We'll contact you soon.");
-    setFormData({ name: "", phone: "", email: "", eventDate: "", eventType: "", guests: "", message: "" });
+
+    setLoading(true);
+    try {
+      const { error } = await supabase.from("enquiries").insert({
+        name: formData.name.trim(),
+        phone: formData.phone.trim(),
+        email: formData.email.trim() || null,
+        event_date: formData.eventDate || null,
+        event_type: formData.eventType || null,
+        guests: formData.guests ? parseInt(formData.guests) : null,
+        message: formData.message.trim() || null,
+      });
+
+      if (error) throw error;
+
+      toast.success("Thank you! Your enquiry has been submitted. We'll contact you soon.");
+      setFormData({ name: "", phone: "", email: "", eventDate: "", eventType: "", guests: "", message: "" });
+    } catch (err) {
+      console.error("Enquiry submission error:", err);
+      toast.error("Something went wrong. Please try again or contact us via WhatsApp.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const whatsappMsg = encodeURIComponent("Hi! I'm interested in booking Shri Ram Vatika for an event. Please share details.");
@@ -160,12 +183,14 @@ const EnquirySection = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 type="submit"
-                className="flex-1 bg-gradient-gold text-primary-foreground py-3 rounded-full font-semibold font-body tracking-wide hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                disabled={loading}
+                className="flex-1 bg-gradient-gold text-primary-foreground py-3 rounded-full font-semibold font-body tracking-wide hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-60"
               >
-                <Send size={18} /> Submit Enquiry
+                {loading ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
+                {loading ? "Submitting..." : "Submit Enquiry"}
               </button>
               <a
-                href={`https://wa.me/919999999999?text=${whatsappMsg}`}
+                href={`https://wa.me/919935294198?text=${whatsappMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 bg-[#25D366] text-primary-foreground py-3 rounded-full font-semibold font-body tracking-wide hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
