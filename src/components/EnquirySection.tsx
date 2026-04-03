@@ -190,7 +190,7 @@ const EnquirySection = () => {
                 {loading ? "Submitting..." : "Submit Enquiry"}
               </button>
               <a
-                href={`https://wa.me/919935294198?text=${whatsappMsg}`}
+                href={`https://wa.me/919339480827?text=${whatsappMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 bg-[#25D366] text-primary-foreground py-3 rounded-full font-semibold font-body tracking-wide hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
