@@ -11,12 +11,12 @@ const ContactSection = () => {
 
         <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
           <a
-            href="tel:+919999999999"
+            href="tel:+919935294198"
             className="flex flex-col items-center gap-3 bg-teal-light/30 border border-gold/20 rounded-2xl p-6 hover:border-gold/50 transition-colors text-center"
           >
             <Phone className="text-gold" size={28} />
             <p className="text-primary-foreground font-display font-semibold">Call Us</p>
-            <p className="text-primary-foreground/70 text-sm font-body">+91 99999 99999</p>
+            <p className="text-primary-foreground/70 text-sm font-body">+91 99352 94198</p>
           </a>
 
           <a
