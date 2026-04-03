@@ -31,7 +31,7 @@ const ContactSection = () => {
           <div className="flex flex-col items-center gap-3 bg-teal-light/30 border border-gold/20 rounded-2xl p-6 text-center">
             <MapPin className="text-gold" size={28} />
             <p className="text-primary-foreground font-display font-semibold">Visit Us</p>
-            <p className="text-primary-foreground/70 text-sm font-body">Near Main Highway, UP</p>
+            <p className="text-primary-foreground/70 text-sm font-body">Maruti Nagar Colony, Dafi, Sear Govardhan Dafi, UP 221011</p>
           </div>
         </div>
 
