@@ -183,12 +183,14 @@ const EnquirySection = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 type="submit"
-                className="flex-1 bg-gradient-gold text-primary-foreground py-3 rounded-full font-semibold font-body tracking-wide hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                disabled={loading}
+                className="flex-1 bg-gradient-gold text-primary-foreground py-3 rounded-full font-semibold font-body tracking-wide hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-60"
               >
-                <Send size={18} /> Submit Enquiry
+                {loading ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
+                {loading ? "Submitting..." : "Submit Enquiry"}
               </button>
               <a
-                href={`https://wa.me/919999999999?text=${whatsappMsg}`}
+                href={`https://wa.me/919935294198?text=${whatsappMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 bg-[#25D366] text-primary-foreground py-3 rounded-full font-semibold font-body tracking-wide hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
