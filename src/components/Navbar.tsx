@@ -28,8 +28,17 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="Shri Ram Vatika" className="h-12 w-auto" />
+        <a href="#home" className="relative flex items-center justify-center">
+          <div className={`absolute rounded-full bg-white shadow-xl transition-all duration-300 ${
+            scrolled ? "w-16 h-16 -bottom-3" : "w-20 h-20 -bottom-5"
+          }`} />
+          <img
+            src={logo}
+            alt="Shri Ram Vatika"
+            className={`relative z-10 transition-all duration-300 ${
+              scrolled ? "h-14 w-14" : "h-[4.5rem] w-[4.5rem]"
+            } object-contain rounded-full`}
+          />
         </a>
 
         {/* Desktop */}
